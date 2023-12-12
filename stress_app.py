@@ -75,30 +75,30 @@ with tab8:
 
 new_data = pd.DataFrame([[100.0, 29.0, 99.0, 35.0, 90.0, 95.0, 2.0, 80.0]] ,columns=X.columns)
 
-sr = st.number_input("Your snoring rate (45 - 100):", value=None, placeholder="Type a number...")
+sr = st.number_input("Your snoring rate (45 - 100):", value="min", placeholder="Type a number...")
 new_data[0]= sr
 
-rr = st.number_input("Your respiration rate (16 - 30):", value=None, placeholder="Type a number...")
+rr = st.number_input("Your respiration rate (16 - 30):", value="min", placeholder="Type a number...")
 new_data[1]= rr
 
-bt = st.number_input("Your body temperature rate (85 - 99 F):", value=None, placeholder="Type a number...")
+bt = st.number_input("Your body temperature rate (85 - 99 F):", value="min", placeholder="Type a number...")
 new_data[2]= bt
 
-lm = st.number_input("Your limb movement (4 - 19):", value=None, placeholder="Type a number...")
+lm = st.number_input("Your limb movement (4 - 19):", value="min", placeholder="Type a number...")
 new_data[3]= lm
 
-bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
+bo = st.number_input("Your blood oxygen (82 - 99):", value="min", placeholder="Type a number...")
 new_data[4]= bo
 
-em = st.number_input("Eye movement (60 - 105):", value=None, placeholder="Type a number...")
+em = st.number_input("Eye movement (60 - 105):", value="min", placeholder="Type a number...")
 new_data[5]= em
 
 
-sh = st.number_input("Sleeping hour (0 - 12):", value=None, placeholder="Type a number...")
+sh = st.number_input("Sleeping hour (0 - 12):", value="min", placeholder="Type a number...")
 new_data[6]= sh
 
 
-hr = st.number_input("Heart rate (50 - 85):", value=None, placeholder="Type a number...")
+hr = st.number_input("Heart rate (50 - 85):", value="min", placeholder="Type a number...")
 new_data[7]= hr
  
 
