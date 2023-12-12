@@ -39,7 +39,7 @@ y_predict = decision_tree_cl.predict(x_test)
 st.title("Human Stress Detection in and through Sleep")
 st.divider()
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Snoring rate", "Respiration rate", "Body temperature", "Limb movement", "Blood oxygen", "Eye movement"])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Snoring rate", "Respiration rate", "Body temperature", "Limb movement", "Blood oxygen", "Eye movement", "Sleeping hours", "Heart rate"])
 with tab1:
    st.header("Snoring rate")
    st.write("The rate or intensity of snoring during sleep, which could be measured in some unit or scale.")
@@ -64,20 +64,27 @@ with tab6:
    st.header("Eye movement")
    st.write("The eye movement activity during sleep, which might indicate the Rapid Eye Movement (REM) phase of sleep.")
 
+with tab7:
+   st.header("Sleeping hours")
+   st.write("The number of hours slept during a particular sleep session.")
+
+with tab8:
+   st.header("Heart rate")
+   st.write("The number of heartbeats per minute during sleep, an essential physiological parameter related to overall health and sleep quality.")
+
 
 sr = st.number_input("Your snoring rate (45 - 100):", value=None, placeholder="Type a number...")
-st.write('The current number is ', sr)
-
-rr = st.number_input("Your respiration rate (45 - 100):", value=None, placeholder="Type a number...")
-st.write('The current number is ', sr)
-
-bt = st.number_input("Your body temperature rate (45 - 100):", value=None, placeholder="Type a number...")
-st.write('The current number is ', sr)
-
-lm = st.number_input("Your limb movement (45 - 100):", value=None, placeholder="Type a number...")
-st.write('The current number is ', sr)
-
-bo = st.number_input("Your blood oxygen (45 - 100):", value=None, placeholder="Type a number...")
-st.write('The current number is ', sr)
 
 
+rr = st.number_input("Your respiration rate (16 - 30):", value=None, placeholder="Type a number...")
+
+
+bt = st.number_input("Your body temperature rate (85 - 99 F):", value=None, placeholder="Type a number...")
+
+
+lm = st.number_input("Your limb movement (4 - 19):", value=None, placeholder="Type a number...")
+
+
+bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
+
+em = st.slider("Your eye movement", 60,105,65)
