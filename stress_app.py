@@ -36,8 +36,10 @@ decision_tree_cl.fit(x_train, y_train)
 y_predict = decision_tree_cl.predict(x_test)
 
 
-st.write("hello!")
+st.write("Human Stress Detection in and through Sleep")
+st.divider()
 
-
+number = st.number_input("Your snoring rate (45 - 100):", value=None, placeholder="Type a number...")
+st.write('The current number is ', number)
 
 
