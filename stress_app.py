@@ -35,6 +35,7 @@ decision_tree_cl = DecisionTreeClassifier(criterion="gini", splitter="best")
 decision_tree_cl.fit(x_train, y_train)
 y_predict = decision_tree_cl.predict(x_test)
 
+new_data = pd.DataFrame([[]] ,columns=X.columns)
 
 st.title("Human Stress Detection in and through Sleep")
 st.divider()
@@ -93,7 +94,34 @@ sh = st.slider("Sleeping hours", 0,12,8)
 
 hr = st.slider("Heart rate", 50,85,65)
 
-
+def fresh():
+    new_data.add(sr)
+    new_data.add(rr)
+    new_data.add(bt)
+    new_data.add(lm)
+    new_data.add(bo)
+    new_data.add(em)
+    new_data.add(sh)
+    new_data.add(hr)
 
 if st.button('Check stress level'):
     st.write("workin on it... :)")
+    fresh()
+   
+# Predict the stress level for the new data
+    predicted_stress_level = decision_tree_cl.predict(new_data)
+
+# Dictionary to map integer stress levels to human-readable labels
+    stress_level_labels = {
+        0: "Low/Normal",
+        1: "Medium Low",
+        2: "Medium",
+        3: "Medium High",
+        4: "High"
+    }
+
+# Assuming you already have the 'predicted_stress_level' from the previous code snippet
+    predicted_stress_label = stress_level_labels[predicted_stress_level[0]]
+
+# Display the human-readable label for the predicted stress level
+    st.write("Predicted Stress Label for New Data:",predicted_stress_level[0],"(",predicted_stress_label,")")
