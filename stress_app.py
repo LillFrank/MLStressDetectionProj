@@ -1,6 +1,7 @@
+
 import numpy as np
 import pandas as pd
-
+import streamlit as st
 
 
 
@@ -35,18 +36,8 @@ decision_tree_cl.fit(x_train, y_train)
 y_predict = decision_tree_cl.predict(x_test)
 
 
+st.write("hello!")
 
 
-# random forest classifier
-random_forest = RandomForestClassifier(n_estimators=5)
-random_forest.fit(x_train,y_train)
-y_predict = random_forest.predict(x_test)
 
 
-# SVM classifier
-svm = SVC()
-svm.fit(x_train,y_train)
-y_predict = svm.predict(x_test)
-
-
-svm.score(x_test,y_test)
