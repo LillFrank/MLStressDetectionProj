@@ -93,3 +93,7 @@ sh = st.slider("Sleeping hours", 0,12,8)
 
 hr = st.slider("Heart rate", 50,85,65)
 
+
+st.button("Check stress level", type="primary")
+if st.button('Check stress level'):
+    st.write("workin on it... :)")
