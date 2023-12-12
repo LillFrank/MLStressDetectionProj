@@ -35,7 +35,7 @@ decision_tree_cl = DecisionTreeClassifier(criterion="gini", splitter="best")
 decision_tree_cl.fit(x_train, y_train)
 y_predict = decision_tree_cl.predict(x_test)
 
-new_data = pd.DataFrame([[]] ,columns=X.columns)
+new_data = pd.DataFrame([[100.0, 29.0, 99.0, 35.0, 90.0, 95.0, 2.0, 80.0]] ,columns=X.columns)
 
 st.title("Human Stress Detection in and through Sleep")
 st.divider()
@@ -73,40 +73,36 @@ with tab8:
    st.header("Heart rate")
    st.write("The number of heartbeats per minute during sleep, an essential physiological parameter related to overall health and sleep quality.")
 
-
-sr = st.number_input("Your snoring rate (45 - 100):", value=None, placeholder="Type a number...")
-
-
-rr = st.number_input("Your respiration rate (16 - 30):", value=None, placeholder="Type a number...")
-
-
-bt = st.number_input("Your body temperature rate (85 - 99 F):", value=None, placeholder="Type a number...")
-
-
-lm = st.number_input("Your limb movement (4 - 19):", value=None, placeholder="Type a number...")
-
-
-bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
-
-em = st.slider("Eye movement", 60,105,65)
-
-sh = st.slider("Sleeping hours", 0,12,8)
-
-hr = st.slider("Heart rate", 50,85,65)
-
 def fresh():
-    new_data.add(sr)
-    new_data.add(rr)
-    new_data.add(bt)
-    new_data.add(lm)
-    new_data.add(bo)
-    new_data.add(em)
-    new_data.add(sh)
-    new_data.add(hr)
+    sr = st.number_input("Your snoring rate (45 - 100):", value=None, placeholder="Type a number...")
+    new_data[0]= sr
+
+    rr = st.number_input("Your respiration rate (16 - 30):", value=None, placeholder="Type a number...")
+    new_data[1]= rr
+
+    bt = st.number_input("Your body temperature rate (85 - 99 F):", value=None, placeholder="Type a number...")
+    new_data[2]= bt
+
+    lm = st.number_input("Your limb movement (4 - 19):", value=None, placeholder="Type a number...")
+    new_data[3]= lm
+
+    bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
+    new_data[4]= bo
+
+    em = st.slider("Eye movement", 60,105,65)
+    new_data[5]= em
+
+    sh = st.slider("Sleeping hours", 0,12,8)
+    new_data[6]= sh
+
+    hr = st.slider("Heart rate", 50,85,65)
+    new_data[7]= hr
+    return new_data
+
 
 if st.button('Check stress level'):
     
-    fresh()
+    new_data= fresh()
    
 # Predict the stress level for the new data
     predicted_stress_level = decision_tree_cl.predict(new_data)
@@ -124,6 +120,6 @@ if st.button('Check stress level'):
     predicted_stress_label = stress_level_labels[predicted_stress_level[0]]
 
 # Display the human-readable label for the predicted stress level
-    st.write("Predicted Stress Label for New Data:2")
+    st.write("Predicted Stress Label for New Data:", predicted_stress_level[0])
              #predicted_stress_level[0],"(",predicted_stress_label,")")
     
