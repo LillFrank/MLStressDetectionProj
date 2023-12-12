@@ -87,4 +87,9 @@ lm = st.number_input("Your limb movement (4 - 19):", value=None, placeholder="Ty
 
 bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
 
-em = st.slider("Your eye movement", 60,105,65)
+em = st.slider("Eye movement", 60,105,65)
+
+sh = st.slider("Sleeping hours", 0,12,8)
+
+hr = st.slider("Heart rate", 50,85,65)
+
