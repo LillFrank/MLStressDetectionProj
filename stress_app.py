@@ -73,36 +73,37 @@ with tab8:
    st.header("Heart rate")
    st.write("The number of heartbeats per minute during sleep, an essential physiological parameter related to overall health and sleep quality.")
 
-def fresh():
-    sr = st.number_input("Your snoring rate (45 - 100):", value=None, placeholder="Type a number...")
-    new_data[0]= sr
 
-    rr = st.number_input("Your respiration rate (16 - 30):", value=None, placeholder="Type a number...")
-    new_data[1]= rr
+sr = st.number_input("Your snoring rate (45 - 100):", value=None, placeholder="Type a number...")
+new_data[0]= sr
 
-    bt = st.number_input("Your body temperature rate (85 - 99 F):", value=None, placeholder="Type a number...")
-    new_data[2]= bt
+rr = st.number_input("Your respiration rate (16 - 30):", value=None, placeholder="Type a number...")
+new_data[1]= rr
 
-    lm = st.number_input("Your limb movement (4 - 19):", value=None, placeholder="Type a number...")
-    new_data[3]= lm
+bt = st.number_input("Your body temperature rate (85 - 99 F):", value=None, placeholder="Type a number...")
+new_data[2]= bt
 
-    bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
-    new_data[4]= bo
+lm = st.number_input("Your limb movement (4 - 19):", value=None, placeholder="Type a number...")
+new_data[3]= lm
 
-    em = st.slider("Eye movement", 60,105,65)
-    new_data[5]= em
+bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
+new_data[4]= bo
 
-    sh = st.slider("Sleeping hours", 0,12,8)
-    new_data[6]= sh
+em = st.slider("Eye movement", 60,105,65)
+new_data[5]= em
 
-    hr = st.slider("Heart rate", 50,85,65)
-    new_data[7]= hr
-    return new_data
+sh = st.slider("Sleeping hours", 0,12,8)
+new_data[6]= sh
 
+hr = st.slider("Heart rate", 50,85,65)
+new_data[7]= hr
+ 
+
+
+   
 
 if st.button('Check stress level'):
-    
-    new_data= fresh()
+   
    
 # Predict the stress level for the new data
     predicted_stress_level = decision_tree_cl.predict(new_data)
