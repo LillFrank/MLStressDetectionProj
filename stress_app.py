@@ -105,7 +105,7 @@ def fresh():
     new_data.add(hr)
 
 if st.button('Check stress level'):
-    st.write("workin on it... :)")
+    
     fresh()
    
 # Predict the stress level for the new data
@@ -124,4 +124,6 @@ if st.button('Check stress level'):
     predicted_stress_label = stress_level_labels[predicted_stress_level[0]]
 
 # Display the human-readable label for the predicted stress level
-    st.write("Predicted Stress Label for New Data:",predicted_stress_level[0],"(",predicted_stress_label,")")
+    st.write("Predicted Stress Label for New Data:2")
+             #predicted_stress_level[0],"(",predicted_stress_label,")")
+    
