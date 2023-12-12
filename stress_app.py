@@ -90,13 +90,15 @@ new_data[3]= lm
 bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
 new_data[4]= bo
 
-em = st.slider("Eye movement", 60,105,65)
+em = st.number_input("Eye movement (60 - 105):", value=None, placeholder="Type a number...")
 new_data[5]= em
 
-sh = st.slider("Sleeping hours", 0,12,8)
+
+sh = st.number_input("Sleeping hour (0 - 12):", value=None, placeholder="Type a number...")
 new_data[6]= sh
 
-hr = st.slider("Heart rate", 50,85,65)
+
+hr = st.number_input("Heart rate (50 - 85):", value=None, placeholder="Type a number...")
 new_data[7]= hr
  
 
