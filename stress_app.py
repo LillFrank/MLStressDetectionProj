@@ -37,8 +37,8 @@ y_predict = decision_tree_cl.predict(x_test)
 
 
 
-st.title("Human Stress Detection in and through Sleep")
-st.divider()
+st.title("Human Stress Detection in and through Sleep", divider='rainbow')
+
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Snoring rate", "Respiration rate", "Body temperature", "Limb movement", "Blood oxygen", "Eye movement", "Sleeping hours", "Heart rate"])
 with tab1:
@@ -117,11 +117,11 @@ if st.button('Check stress level'):
 
 
    stress_level_labels = {
-        0: "Low/Normal :sunglasses: ",
-        1: "Medium Low",
-        2: "Medium",
-        3: "Medium High",
-        4: ":red[High]"
+        0: ":green[Low/Normal] :sunglasses: ",
+        1: ":blue[Medium Low] :no_mouth: ",
+        2: ":orange[Medium] :neutral_face:",
+        3: ":violet[Medium High] :anguished:",
+        4: ":red[High] :worried:"
    }
 
 
@@ -129,5 +129,5 @@ if st.button('Check stress level'):
 
 
    st.subheader("Your Predicted Stress Level:")
-   st.write( predicted_stress_level[0],"(",predicted_stress_label,")")
+   st.write( predicted_stress_level[0],", ",predicted_stress_label,)
     
