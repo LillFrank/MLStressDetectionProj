@@ -117,7 +117,7 @@ if st.button('Check stress level'):
 
 
    stress_level_labels = {
-        0: ":green[Low/Normal] :sunglasses:",
+        0: ":green[Low/Normal] ",
         1: "Medium Low",
         2: "Medium",
         3: "Medium High",
