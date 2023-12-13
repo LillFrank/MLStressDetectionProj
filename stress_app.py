@@ -75,30 +75,30 @@ with tab8:
 
 
 
-sr = st.number_input("Your snoring rate (45 - 100):", value=None, placeholder="Type a number...")
+sr = st.number_input("Your snoring rate (45 - 100):",min_value=45, value="min", placeholder="Type a number...")
 
 
-rr = st.number_input("Your respiration rate (16 - 30):", value=None, placeholder="Type a number...")
+rr = st.number_input("Your respiration rate (16 - 30):",min_value=16, value="min", placeholder="Type a number...")
 
 
-bt = st.number_input("Your body temperature rate (85 - 99 F):", value=None, placeholder="Type a number...")
+bt = st.number_input("Your body temperature rate (85 - 99 F):",min_value=85, value="min", placeholder="Type a number...")
 
 
-lm = st.number_input("Your limb movement (4 - 19):", value=None, placeholder="Type a number...")
+lm = st.number_input("Your limb movement (4 - 19):", value="min",min_value=4, placeholder="Type a number...")
 
 
-bo = st.number_input("Your blood oxygen (82 - 99):", value=None, placeholder="Type a number...")
+bo = st.number_input("Your blood oxygen (82 - 99):", value="min",min_value=82, placeholder="Type a number...")
 
 
-em = st.number_input("Eye movement (60 - 105):", value=None, placeholder="Type a number...")
-
-
-
-sh = st.number_input("Sleeping hour (0 - 12):", value=None, placeholder="Type a number...")
+em = st.number_input("Eye movement (60 - 105):", value="min",min_value=60, placeholder="Type a number...")
 
 
 
-hr = st.number_input("Heart rate (50 - 85):", value=None, placeholder="Type a number...")
+sh = st.number_input("Sleeping hour (0 - 12):", value="min",min_value=0, placeholder="Type a number...")
+
+
+
+hr = st.number_input("Heart rate (50 - 85):", value="min",min_value=50, placeholder="Type a number...")
 
  
 def reload():
