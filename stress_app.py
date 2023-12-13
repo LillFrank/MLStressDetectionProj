@@ -47,31 +47,31 @@ with tab1:
    st.write("The rate or intensity of snoring during sleep, which could be measured in some unit or scale.")
 
 with tab2:
-   st.header("Respiration rate")
+   st.subheader("Respiration rate")
    st.write("The number of breaths taken per minute during sleep.")
 
 with tab3:
-   st.header("Body temeprature")
+   st.subheader("Body temeprature")
    st.write("The body temperature of the user during sleep, possibly measured in degrees Celsius or Fahrenheit.")
 
 with tab4:
-   st.header("Limb movement")
+   st.subheader("Limb movement")
    st.write("The rate or intensity of limb movement during sleep, indicating how active or restless the person is.")
 
 with tab5:
-   st.header("Blood oxygen")
+   st.subheader("Blood oxygen")
    st.write("The blood oxygen level, which represents the amount of oxygen present in the blood during sleep.")
 
 with tab6:
-   st.header("Eye movement")
+   st.subheader("Eye movement")
    st.write("The eye movement activity during sleep, which might indicate the Rapid Eye Movement (REM) phase of sleep.")
 
 with tab7:
-   st.header("Sleeping hours")
+   st.subheader("Sleeping hours")
    st.write("The number of hours slept during a particular sleep session.")
 
 with tab8:
-   st.header("Heart rate")
+   st.subheader("Heart rate")
    st.write("The number of heartbeats per minute during sleep, an essential physiological parameter related to overall health and sleep quality.")
 
 
