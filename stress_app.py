@@ -31,14 +31,14 @@ x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 
 # decision tree classifier
-#decision_tree_cl = DecisionTreeClassifier(criterion="gini", splitter="best")
-#decision_tree_cl.fit(x_train, y_train)
-#y_predict = decision_tree_cl.predict(x_test)
+decision_tree_cl = DecisionTreeClassifier(criterion="gini", splitter="best")
+decision_tree_cl.fit(x_train, y_train)
+y_predict = decision_tree_cl.predict(x_test)
 
 #random forest
-random_forest = RandomForestClassifier(n_estimators=300)
-random_forest.fit(x_train,y_train)
-y_predict = random_forest.predict(x_test)
+#random_forest = RandomForestClassifier(n_estimators=300)
+#random_forest.fit(x_train,y_train)
+#y_predict = random_forest.predict(x_test)
 
 
 st.title("Human Stress Detection in and through Sleep")
@@ -118,8 +118,8 @@ if st.button('Check stress level'):
    
    
    data = reload()
-   #predicted_stress_level = decision_tree_cl.predict(data)
-   predicted_level = random_forest.predict(data)
+   predicted_stress_level = decision_tree_cl.predict(data)
+   #predicted_level = random_forest.predict(data)
 
 
    stress_level_labels = {
@@ -131,9 +131,9 @@ if st.button('Check stress level'):
    }
 
 
-   predicted_stress_label = stress_level_labels[predicted_level[0]]
+   predicted_stress_label = stress_level_labels[predicted_stress_level[0]]
 
 
    st.subheader("Your Predicted Stress Level:")
-   st.write( predicted_level[0],", ",predicted_stress_label,)
+   st.write( predicted_stress_level[0],", ",predicted_stress_label,)
     
