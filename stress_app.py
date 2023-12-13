@@ -117,16 +117,16 @@ if st.button('Check stress level'):
 
 
    stress_level_labels = {
-        0: "Low/Normal",
+        0: ":green[Low/Normal] :sunglasses:",
         1: "Medium Low",
         2: "Medium",
         3: "Medium High",
-        4: "High"
+        4: ":red[High]"
    }
 
 
    predicted_stress_label = stress_level_labels[predicted_stress_level[0]]
 
 
-   st.write("Your Predicted Stress Level:", predicted_stress_level[0],"(",predicted_stress_label,")")
+   st.subheader("Your Predicted Stress Level:", predicted_stress_level[0],"(",predicted_stress_label,")")
     
