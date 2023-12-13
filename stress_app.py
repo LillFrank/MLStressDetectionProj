@@ -117,7 +117,7 @@ if st.button('Check stress level'):
 
 
    stress_level_labels = {
-        0: "Low/Normal ",
+        0: "Low/Normal :sunglasses: ",
         1: "Medium Low",
         2: "Medium",
         3: "Medium High",
@@ -129,5 +129,5 @@ if st.button('Check stress level'):
 
 
    st.subheader("Your Predicted Stress Level:")
-   st.write("                                   ", predicted_stress_level[0],"(",predicted_stress_label,")")
+   st.write( predicted_stress_level[0],"(",predicted_stress_label,")")
     
