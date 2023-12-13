@@ -128,6 +128,5 @@ if st.button('Check stress level'):
    predicted_stress_label = stress_level_labels[predicted_stress_level[0]]
 
 
-   st.write("Predicted Stress Label for New Data:", predicted_stress_level[0])
-             #predicted_stress_level[0],"(",predicted_stress_label,")")
+   st.write("Your Predicted Stress Level:", predicted_stress_level[0],"(",predicted_stress_label,")")
     
