@@ -43,7 +43,7 @@ st.header(" ",divider='rainbow')
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Snoring rate", "Respiration rate", "Body temperature", "Limb movement", "Blood oxygen", "Eye movement", "Sleeping hours", "Heart rate"])
 with tab1:
-   st.header("Snoring rate")
+   st.subheader("Snoring rate")
    st.write("The rate or intensity of snoring during sleep, which could be measured in some unit or scale.")
 
 with tab2:
