@@ -38,7 +38,7 @@ y_predict = decision_tree_cl.predict(x_test)
 
 
 st.title("Human Stress Detection in and through Sleep")
-st.header("Check your stress level...",divider='rainbow')
+st.header(" ",divider='rainbow')
 
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(["Snoring rate", "Respiration rate", "Body temperature", "Limb movement", "Blood oxygen", "Eye movement", "Sleeping hours", "Heart rate"])
